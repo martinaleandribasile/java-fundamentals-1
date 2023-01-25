@@ -8,13 +8,13 @@ public class SondaggioOS {
 		int linux= 3;
 		int mac= 6;
 		
-		float percentualeWindows= (float) ((windows*100)/studenti);
+		float percentualeWindows=  ((float)(windows*100)/studenti);
 		System.out.println(percentualeWindows + "% di studenti che utilizzano Windows");
 
-		float percentualeMac= (float) ((mac*100)/studenti);
+		float percentualeMac=  ((float)(mac*100)/studenti);
 		System.out.println(percentualeMac + "% di studenti che utilizzano Mac");
 		
-		float percentualeLinux= (float) ((linux*100)/studenti);
+		float percentualeLinux= ((float) (linux*100)/studenti);
 		System.out.println(percentualeLinux + "% di studenti che utilizzano Linux");
 	}
 
