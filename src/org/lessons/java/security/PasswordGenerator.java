@@ -30,6 +30,7 @@ public class PasswordGenerator {
 		int data= anno + mese + giorno;
 		String password = nomeCapitalize + "-" + cognomeCapitalize + "-" + colore + "-" + data;
 		System.out.println("La tua password e' " + password );
+		s.close();
 	}
 
 }

@@ -29,6 +29,7 @@ public class SondaggioOSScanner {
 			float percentualeOSIndefinito= (float) ((studentiOSIndefinito*100)/studenti);
 			System.out.println(percentualeOSIndefinito + "% non hanno dichiarato il loro OS");
 		}
+		s.close();
 	}
 
 }
