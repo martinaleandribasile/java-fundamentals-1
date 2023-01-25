@@ -27,7 +27,7 @@ public class SondaggioOSScanner {
 		if(windows + mac + linux != studenti) {
 			int studentiOSIndefinito = studenti - (windows + mac + linux);
 			float percentualeOSIndefinito= (float) ((studentiOSIndefinito*100)/studenti);
-			System.out.println(percentualeOSIndefinito + "% non hanno dichiarato il loro OS");
+			System.out.println(percentualeOSIndefinito + "% non hanno dichiarato il loro OS, mancano " + studentiOSIndefinito + " dichiarazioni di OS" );
 		}
 		s.close();
 	}
