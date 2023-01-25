@@ -26,7 +26,6 @@ public class SondaggioOSScanner {
 		double percentualeLinux=  ((double)(linux*100)/studenti);
 		System.out.println( round.format(percentualeLinux) + "% di studenti che utilizzano Windows");
 		
-		
 		int inseriti= windows + mac + linux;
 		if(inseriti < studenti) {
 			int studentiOSIndefinito = studenti - (windows + mac + linux);
