@@ -1,8 +1,10 @@
 package org.lessons.java.security;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 public class SondaggioOSScanner {
-
+	private static final DecimalFormat round = new DecimalFormat("0.00");
 	public static void main(String[] args) {
+		
 		int studenti;
 		int windows;
 		int linux;
@@ -17,16 +19,18 @@ public class SondaggioOSScanner {
 		System.out.print("Quanti studenti usano Linux?");
 		linux= s.nextInt();
 		
-		float percentualeWindows= (float) ((windows*100)/studenti);
-		System.out.println(percentualeWindows + "% di studenti che utilizzano Windows");
-		float percentualeMac= (float) ((mac*100)/studenti);
-		System.out.println(percentualeMac + "% di studenti che utilizzano Windows");
-		float percentualeLinux= (float) ((linux*100)/studenti);
-		System.out.println(percentualeLinux + "% di studenti che utilizzano Windows");
+		double percentualeWindows=  ((double)(windows*100)/studenti);
+		System.out.println(round.format(percentualeWindows) + "% di studenti che utilizzano Windows");
+		double percentualeMac=  ((double)(mac*100)/studenti);
+		System.out.println(round.format(percentualeMac) + "% di studenti che utilizzano Windows");
+		double percentualeLinux=  ((double)(linux*100)/studenti);
+		System.out.println( round.format(percentualeLinux) + "% di studenti che utilizzano Windows");
 		
-		if(windows + mac + linux != studenti) {
+		
+		int inseriti= windows + mac + linux;
+		if(inseriti < studenti) {
 			int studentiOSIndefinito = studenti - (windows + mac + linux);
-			float percentualeOSIndefinito= (float) ((studentiOSIndefinito*100)/studenti);
+			double percentualeOSIndefinito= (double) ((studentiOSIndefinito*100)/studenti);
 			System.out.println(percentualeOSIndefinito + "% non hanno dichiarato il loro OS, mancano " + studentiOSIndefinito + " dichiarazioni di OS" );
 		}
 		s.close();
