@@ -17,6 +17,7 @@ public class CalcolaBiglietto {
 		double prezzoBiglietto=prezzoIntero(km,age);
 		
 		System.out.println("il tuo biglietto costa "+ prezzoBiglietto + " euro");
+		s.close();
 	}
 	
 	static double prezzoIntero(int km, int age) {
@@ -35,4 +36,5 @@ public class CalcolaBiglietto {
 		}
 		return sconto;
 	}
+	
 }
